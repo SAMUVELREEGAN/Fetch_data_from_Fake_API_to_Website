@@ -1,39 +1,42 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+
 
 const NavSection2 = () => {
+  const location = useLocation();
+
+  const isActive = (path) => location.pathname === path;
+
+  const getLinkStyle = (path) => ({
+    textDecoration: "none",
+    color: isActive(path) ? "orangered" : "white",
+  });
+
   return (
     <div
       style={{
         backgroundColor: "black",
         overflowX: "auto",
-        textAlign: "center", 
+        textAlign: "center",
         WebkitOverflowScrolling: "touch",
       }}
     >
       <div
         style={{
-          display: "inline-flex", 
+          display: "inline-flex",
           gap: "20px",
           padding: "15px 20px",
           whiteSpace: "nowrap",
         }}
         className="nav2"
       >
-        <Link style={linkStyle} to="/">Home</Link>
-        <Link style={linkStyle} to="/about">About Us</Link>
-        <Link style={linkStyle} to="/shop">Shop</Link>
-        <Link style={linkStyle} to="/contact">Contact Us</Link>
-        <Link style={linkStyle} to="/order">My Orders</Link>
+        <Link style={getLinkStyle("/")} to="/">Home</Link>
+        <Link style={getLinkStyle("/about")} to="/about">About Us</Link>
+        <Link style={getLinkStyle("/shop")} to="/shop">Shop</Link>
+        <Link style={getLinkStyle("/contact")} to="/contact">Contact Us</Link>
+        <Link style={getLinkStyle("/order")} to="/order">My Orders</Link>
       </div>
     </div>
   );
-};
-
-const linkStyle = {
-  textDecoration: "none",
-  color: "white",
-  whiteSpace: "nowrap",
-  flexShrink: 0,
 };
 
 export default NavSection2;

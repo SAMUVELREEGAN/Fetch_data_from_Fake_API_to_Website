@@ -81,8 +81,8 @@ body {
 }
 
 .pro_img {
-    width: 100%;        /* was 250px — change this */
-  max-width: 250px;   /* optional for control */
+    width: 100%;     
+  max-width: 250px;
   height: 150px;
   background-color: white;
   margin-top: 22px;
@@ -98,7 +98,7 @@ body {
 
 
 
-/* Tablet and below */
+
 @media (max-width: 768px) {
   .pro_all {
     height: auto;
@@ -120,7 +120,7 @@ body {
   }
 }
 
-/* Mobile and below */
+
 @media (max-width: 480px) {
   .pro_all {
     flex-direction: column;
@@ -139,3 +139,68 @@ body {
   }
 }
 
+
+
+.contact_icons{
+  font-size: 25px;
+  transition: .3s;
+  margin: 10px 5px;
+  color: gray;
+}
+.contact_icons:hover{
+  color: orangered;
+  cursor: pointer;
+}
+
+.contact_container{
+  background-color: #efefef;
+  height: auto;
+padding: 40px 20px;
+  margin:20px 0px;
+}
+.contact_container h4{
+font-family: 'Times New Roman', Times, serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: #000;
+}
+
+.contact_container input ,textarea{
+  background-color: transparent;
+  outline: none;
+  border: 1px solid rgb(207, 207, 207);
+}
+
+.contact_container button{
+  background-color: rgb(255, 68, 0);
+  border: none;
+  cursor: pointer;
+  color: white;
+  padding: 10px 50px;
+}
+.contact_icons1{
+  font-size: 23px;
+  transition: .3s;
+  margin: 10px 5px;
+  color: gray !important;
+  /* background-color: red; */
+  padding: 7px;
+  height: 30px;
+  width: 30px;
+}
+.contact_icons1:hover{
+  background-color: orangered;
+  cursor: pointer;
+ color: white !important;
+ border-radius: 50%;
+ 
+}
+
+.subscribe{
+  background-color: rgb(255, 68, 0);
+   border: none;
+  cursor: pointer;
+  color: white;
+  padding: 10px 50px;
+  align-items: start;
+}

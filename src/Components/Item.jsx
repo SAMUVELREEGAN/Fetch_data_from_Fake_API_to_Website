@@ -1,8 +1,11 @@
 import { MdOutlineStar } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const Item = ({ product }) => {
   return (
+    <Link to={`/shop/${product.id}`} style={{textDecoration:"none" , color:"black"}}>
     <div className="pro_all">
+      
       <div className="pro_img">
         <img src={product.image} alt="" />
       </div>
@@ -14,7 +17,9 @@ const Item = ({ product }) => {
           <div>({product.rating.count}reviews)</div>
         </div>
       </div>
+      
     </div>
+    </Link>
   );
 };
 

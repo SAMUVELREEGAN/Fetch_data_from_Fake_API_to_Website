@@ -52,9 +52,9 @@ const Product = () => {
         <div >
           <Row className="g-3 g-md-4">
             {
-            Product.map((e)=>(
-              <Col lg={3} md={6} sm={6} xs={6}>
-              <Item product={e} key={e.id}/>
+            Product.map((e,index)=>(
+              <Col lg={3} md={6} sm={6} xs={6} key={index}>
+              <Item product={e}  />
               </Col>
             ))
           }
