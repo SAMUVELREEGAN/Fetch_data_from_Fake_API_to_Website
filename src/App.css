@@ -99,6 +99,41 @@ body {
 
 
 
+.list_layout {
+  flex-direction: row !important;
+  align-items: flex-start;
+  text-align: left;
+  height: auto;
+  padding: 15px;
+  gap: 20px;
+  width: 900px;
+  justify-content: center;
+    margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.list_layout .pro_img {
+  max-width: 150px;
+  height: 150px;
+}
+
+.list_layout .pro_img img {
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  object-fit: contain;
+}
+
+.list_layout .pro_info {
+  flex: 1;
+}
+
+
+
+
+
+
 @media (max-width: 768px) {
   .pro_all {
     height: auto;
