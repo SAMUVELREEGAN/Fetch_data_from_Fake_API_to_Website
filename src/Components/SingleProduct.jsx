@@ -2,8 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { MdOutlineStar } from "react-icons/md";
 import { useParams } from "react-router-dom";
-import pic from "../assets/load.gif";
-import { Container, Row, Col } from "react-bootstrap";
+// import pic from "../assets/load.gif";
+import { Container, Row, Col, Spinner } from "react-bootstrap";
 
 const SingleProduct = () => {
     const [Product, setProduct] = useState([]);
@@ -84,9 +84,12 @@ const SingleProduct = () => {
                     </Row>
                 </Container>
             ) : (
-                <div style={{ textAlign: "center", padding: "50px" }}>
-                    <img src={pic} alt="loading..." style={{ width: "80px" }} />
-                </div>
+                // <div style={{ textAlign: "center", padding: "50px" }}>
+                //     <img src={pic} alt="loading..." style={{ width: "80px" }} />
+                // </div>
+                <div className="text-center my-5">
+              <Spinner animation="border" variant="warning" style={{padding:"30px"}} />
+            </div>
             )}
         </div>
     );
