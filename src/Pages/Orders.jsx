@@ -92,7 +92,7 @@ const Orders = () => {
       </div>
 
       <div className="orders-container">
-        <h2 style={{backgroundColor:"black" ,color:"white" , fontSize:"20px" , marginTop:"30px"}}>
+        <h2 style={{backgroundColor:"black" ,color:"white" , fontSize:"20px" , marginTop:"30px" ,padding:"7px 0px"}}>
           <span className="bold">My Orders</span>{" "}
           <span className="sub text-light">(Last 7 days, 2 orders)</span>
         </h2>

@@ -85,7 +85,7 @@ const NavSection1 = () => {
           position: "relative",
         }}
       >
-        <h2>shopy</h2>
+        <a href="/" style={{textDecoration:"none" , color:"black"}}><h2>shopy</h2></a>
 
         {/* Right-side icons */}
         <div
