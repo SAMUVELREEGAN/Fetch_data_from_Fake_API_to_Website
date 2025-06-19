@@ -1,10 +1,10 @@
-// src/components/NavSection1.jsx
 import { useContext, useState, useEffect } from "react";
 import { Container, Modal, Button } from "react-bootstrap";
 import { SlHandbag, SlUser } from "react-icons/sl";
 import { GoSearch } from "react-icons/go";
 import axios from "axios";
 import { AuthContext } from "../context/AuthContext";
+import { Link } from "react-router-dom";
 
 const NavSection1 = () => {
   const { user, setUser } = useContext(AuthContext);
@@ -81,19 +81,14 @@ const NavSection1 = () => {
           justifyContent: "space-between",
           marginTop: "10px",
           position: "relative",
-        }}
-      >
+        }} >
         <h2>shopy</h2>
 
         <div style={{ fontSize: "27px", position: "relative", display: "flex", gap: "5px", alignItems: "center" }}>
           <GoSearch  style={{marginTop:"5px"}}/> |
 
-          {/* Hoverable User Icon + Dropdown */}
-          <div
-            onMouseEnter={() => setDropdownOpen(true)}
-            onMouseLeave={() => setDropdownOpen(false)}
-            style={{ position: "relative", display: "inline-block" }}
-          >
+           
+          <div onMouseEnter={() => setDropdownOpen(true)} onMouseLeave={() => setDropdownOpen(false)} style={{ position: "relative", display: "inline-block" }} >
             <span style={{ cursor: "pointer" }}>
               <SlUser /> |
             </span>
@@ -102,32 +97,26 @@ const NavSection1 = () => {
                 style={{
                   position: "absolute",
                   right: 0,
-                  top: 30,
+                  top: 40,
                   background: "#fff",
                   border: "1px solid #ccc",
                   borderRadius: "5px",
                   zIndex: 1000,
                   padding: "10px",
-                }}
-              >
+                  fontSize:"15px",
+                  width:"100px" }} >
                 {user ? (
                   <>
-                    <p style={{ margin: 0 }}> {user.username}</p>
-                    <p
-                      style={{ margin: "5px 0", cursor: "pointer", color: "red" }}
-                      onClick={handleLogout}
-                    >
+                     
+                    <Link to='/proflie' style={{textDecoration:"none" , color:"black"}}>My Profile</Link>
+                    <p style={{ margin: "5px 0", cursor: "pointer", color: "red" }} onClick={handleLogout} >
                       Logout
                     </p>
                   </>
                 ) : (
                   <p
                     style={{ margin: 0, cursor: "pointer" }}
-                    onClick={() => {
-                      setShowModal(true);
-                      setDropdownOpen(false);
-                    }}
-                  >
+                    onClick={() => { setShowModal(true);  setDropdownOpen(false); }}  >
                     Login
                   </p>
                 )}
@@ -135,11 +124,7 @@ const NavSection1 = () => {
             )}
           </div>
 
-          {/* Cart Icon with Count */}
-          <span
-            onClick={toggleCart}
-            style={{ cursor: "pointer", position: "relative" }}
-          >
+          <span onClick={toggleCart} style={{ cursor: "pointer", position: "relative" }}  >
             <SlHandbag />
             {cartData.length > 0 && (
               <span
@@ -151,9 +136,7 @@ const NavSection1 = () => {
                   color: "white",
                   fontSize: "12px",
                   borderRadius: "50%",
-                  padding: "2px 6px",
-                }}
-              >
+                  padding: "2px 6px", }} >
                 {cartData.length}
               </span>
             )}
@@ -161,7 +144,7 @@ const NavSection1 = () => {
         </div>
       </Container>
 
-      {/* Cart Panel */}
+ 
       {cartOpen && user && (
         <div
           style={{
@@ -174,9 +157,9 @@ const NavSection1 = () => {
             padding: "20px",
             zIndex: 999,
             overflowY: "auto",
-          }}
-        >
-          <h5>🛒 Cart Items</h5>
+          }} >
+
+          <h5>Cart Items</h5>
           {cartData.length > 0 ? (
             cartData.map((item, i) => (
               <div
@@ -187,14 +170,9 @@ const NavSection1 = () => {
                   marginBottom: "10px",
                   borderBottom: "1px solid #ccc",
                   paddingBottom: "10px",
-                }}
-              >
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  width={40}
-                  style={{ marginRight: 10 }}
-                />
+                }} >
+                <img src={item.image} alt={item.title} width={40} style={{ marginRight: 10 }} />
+
                 <div>
                   <strong style={{ fontSize: "14px" }}>{item.title}</strong>
                   <div>Qty: {item.quantity}</div>
@@ -205,36 +183,20 @@ const NavSection1 = () => {
           ) : (
             <p>No items found</p>
           )}
-          <Button
-            size="sm"
-            variant="danger"
-            style={{ marginTop: "15px" }}
-            onClick={() => setCartOpen(false)}
-          >
+          <Button size="sm" variant="danger" style={{ marginTop: "15px" }} onClick={() => setCartOpen(false)} >
             Close
           </Button>
         </div>
       )}
 
-      {/* Login Modal */}
+    
       <Modal show={showModal} onHide={() => setShowModal(false)} centered>
         <Modal.Header closeButton>
           <Modal.Title>Login</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <input
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            className="form-control mb-2"
-            placeholder="Username"
-          />
-          <input
-            type="password"
-            value={password}
-            className="form-control"
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Password"
-          />
+          <input value={username} onChange={(e) => setUsername(e.target.value)} className="form-control mb-2"  placeholder="Username" />
+          <input type="password" value={password} className="form-control" onChange={(e) => setPassword(e.target.value)}  placeholder="Password" />
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={() => setShowModal(false)}>

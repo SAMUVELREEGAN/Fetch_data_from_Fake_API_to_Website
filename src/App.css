@@ -54,12 +54,10 @@ body {
     /* justify-content: end; */
     align-items: center;
   }
-  .sort_dropdown{
+  .sort_dropdown {
     margin-top: -23px;
   }
 }
-
-
 
 .pro_all {
   background-color: #efefef;
@@ -81,7 +79,7 @@ body {
 }
 
 .pro_img {
-    width: 100%;     
+  width: 100%;
   max-width: 250px;
   height: 150px;
   background-color: white;
@@ -96,9 +94,6 @@ body {
   object-fit: contain;
 }
 
-
-
-
 .list_layout {
   flex-direction: row !important;
   align-items: flex-start;
@@ -108,9 +103,8 @@ body {
   gap: 20px;
   width: 900px;
   justify-content: center;
-    margin-left: auto;
+  margin-left: auto;
   margin-right: auto;
-  
 }
 
 .list_layout .pro_img {
@@ -129,34 +123,40 @@ body {
   flex: 1;
 }
 
-
-
-
-
-
-@media (max-width: 768px) {
+@media (max-width: 980px) and (min-width: 480px) {
   .pro_all {
-    height: auto;
-    padding: 20px 10px;
-    margin: 15px 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    padding: 15px 10px;
+    height: 25rem !important; 
   }
 
   .pro_img {
-    width: 90%;
-    height: auto;
-    margin-top: 15px;
+    width: 100%;
+    max-width: 300px;
+    height: 300px !important;
+    margin: 0 auto;
   }
 
   .pro_img img {
     width: 100%;
-    height: auto;
-    padding: 8px;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  .pro_info {
+    font-size: 14px;
+    padding-top: 10px;
+  }
+
+  .pro_info_title {
+    font-weight: bold;
   }
 }
 
 
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
   .pro_all {
     flex-direction: column;
     height: auto;
@@ -170,52 +170,114 @@ body {
   }
 
   .pro_img img {
-    padding: 6px;
+    object-fit: contain;
+  }
+} */
+@media screen and (max-width: 1200px) {
+  .pro_all {
+    flex-direction: column;
+    height: 22rem;
+    /* margin: 10px 0; */
+    padding: 15px 10px;
+  }
+
+  .pro_img {
+    width: 100%;
+    max-width: 250px;
+    height: 200px;
+    margin-top: -1%;
+  }
+
+  .pro_img img {
+    object-fit: contain;
+  }
+  .pro_info {
+    height: 200px;
+    font-size: 14px;
+  }
+  .pro_info_title {
+    font-weight: bold;
+    height: 6.4rem;
+  }
+}
+@media screen and (max-width: 380px) {
+  .pro_all {
+    flex-direction: column;
+    height: 18rem;
+    /* margin: 10px 0; */
+    padding: 15px 10px;
+  }
+
+ .pro_img {
+  width: 100%;
+  max-width: 250px;
+  height: 150px;
+  margin-top: -1%;
+}
+
+.pro_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain !important;
+}
+
+
+  .pro_info {
+    height: 200px;
+    font-size: 14px;
+  }
+  .pro_info_title {
+    font-weight: bold;
+    height: auto;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
-
-
-.contact_icons{
+.contact_icons {
   font-size: 25px;
-  transition: .3s;
+  transition: 0.3s;
   margin: 10px 5px;
   color: gray;
 }
-.contact_icons:hover{
+.contact_icons:hover {
   color: orangered;
   cursor: pointer;
 }
 
-.contact_container{
+.contact_container {
   background-color: #efefef;
   height: auto;
-padding: 40px 20px;
-  margin:20px 0px;
+  padding: 40px 20px;
+  margin: 20px 0px;
 }
-.contact_container h4{
-font-family: 'Times New Roman', Times, serif;
+.contact_container h4 {
+  font-family: "Times New Roman", Times, serif;
   font-size: 24px;
   font-weight: 500;
   color: #000;
 }
 
-.contact_container input ,textarea{
+.contact_container input,
+textarea {
   background-color: transparent;
   outline: none;
   border: 1px solid rgb(207, 207, 207);
 }
 
-.contact_container button{
+.contact_container button {
   background-color: rgb(255, 68, 0);
   border: none;
   cursor: pointer;
   color: white;
   padding: 10px 50px;
 }
-.contact_icons1{
+.contact_icons1 {
   font-size: 23px;
-  transition: .3s;
+  transition: 0.3s;
   margin: 10px 5px;
   color: gray !important;
   /* background-color: red; */
@@ -223,17 +285,16 @@ font-family: 'Times New Roman', Times, serif;
   height: 30px;
   width: 30px;
 }
-.contact_icons1:hover{
+.contact_icons1:hover {
   background-color: orangered;
   cursor: pointer;
- color: white !important;
- border-radius: 50%;
- 
+  color: white !important;
+  border-radius: 50%;
 }
 
-.subscribe{
+.subscribe {
   background-color: rgb(255, 68, 0);
-   border: none;
+  border: none;
   cursor: pointer;
   color: white;
   padding: 10px 50px;

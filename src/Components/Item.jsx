@@ -10,12 +10,12 @@ const Item = ({ product, layout }) => {
         </div>
         <div className="pro_info">
           <p style={{
-            fontSize: "14px",
+            // fontSize: "14px",
             color: "black",
             padding: "0px 15px",
-            fontWeight: "bold",
-            height: "45px"
-          }}>
+            // fontWeight: "bold",
+            // height: "45px"
+          }} className="pro_info_title">
             {product.title}
           </p>
           <p>₹{product.price}/-</p>

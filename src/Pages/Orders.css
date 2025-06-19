@@ -1,0 +1,75 @@
+.orders-container {
+  /* padding: 20px; */
+  font-family: Arial, sans-serif;
+  background-color: #f2f8ff;
+}
+
+.orders-container h2{
+    padding: 0;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.sub {
+  font-size: 0.9em;
+  color: #444;
+}
+
+.orders-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+  padding: 0px 20px; 
+}
+
+.order-card {
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 15px;
+  flex: 1 1 45%;
+  min-width: 280px;
+}
+
+.order-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.icon {
+  font-size: 1.2em;
+  margin-right: 8px;
+}
+
+.status {
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 0.85em;
+  white-space: nowrap;
+}
+
+.status.placed {
+  background-color: #2979ff;
+  color: white;
+}
+
+.status.cancelled {
+  background-color: #757575;
+  color: white;
+}
+
+.order-details {
+  font-size: 1em;
+  line-height: 1.6em;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .orders-grid {
+    flex-direction: column;
+  }
+}
