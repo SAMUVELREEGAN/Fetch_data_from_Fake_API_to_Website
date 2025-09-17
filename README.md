@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# 🌐 Fetch Data from Fake API – Backend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains the **backend service** for fetching data from a fake API and serving it to a frontend application.  
+It is built with **Node.js** and **Express.js**, connected to **MongoDB** for data storage.
 
-## Available Scripts
+🔗 [Live Website](https://api-communication-protocol.netlify.app/)  
+🔗 [Fake Store API](https://fakestoreapi.com/)
 
-In the project directory, you can run:
+---
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- 🔹 Fetch data from an external fake API (`https://fakestoreapi.com/`)  
+- 🔹 Store fetched data in MongoDB  
+- 🔹 Provide REST API endpoints for frontend consumption  
+- 🔹 Modular code structure using Controllers and Routes  
+- 🔹 Environment-based configuration for development and production  
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠 Tech Stack
 
-### `npm run build`
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white) ![Express](https://img.shields.io/badge/Express.js-000000?style=flat-square&logo=express&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white) ![Mongoose](https://img.shields.io/badge/Mongoose-880000?style=flat-square&logo=mongodb&logoColor=white) ![Axios](https://img.shields.io/badge/Axios-5A29E4?style=flat-square&logo=axios&logoColor=white) 
+  
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 👩‍💻 Contribution Stats
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Contributors](https://img.shields.io/github/contributors/SAMUVELREEGAN/Fetch_data_from_Fake_API_to_Website_backend?color=brightgreen&style=for-the-badge)  ![Open Issues](https://img.shields.io/github/issues/SAMUVELREEGAN/Fetch_data_from_Fake_API_to_Website_backend?color=blue&style=for-the-badge) ![Forks](https://img.shields.io/github/forks/SAMUVELREEGAN/Fetch_data_from_Fake_API_to_Website_backend?color=yellow&style=for-the-badge)  
+ 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📸 Screenshots
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Example:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<img width="1573" height="676" alt="Capture" src="https://github.com/user-attachments/assets/b3f4b584-f20d-4c0c-8c39-cc044ebfd445" />
+<img width="1597" height="607" alt="Capture1" src="https://github.com/user-attachments/assets/99105e54-1762-4b58-b54a-934b34a3a417" />
+<img width="1592" height="700" alt="Capture2" src="https://github.com/user-attachments/assets/ec7a8884-3fea-42a9-8f61-3a06c5462b0b" />
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🔗 Installation
 
-### Code Splitting
+1. Clone the repository:  
+   ```bash
+   git clone https://github.com/SAMUVELREEGAN/Fetch_data_from_Fake_API_to_Website_backend.git
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. Navigate to the project folder:
+  cd Fetch_data_from_Fake_API_to_Website_backend
 
-### Analyzing the Bundle Size
+3. Install dependencies:
+  npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+🤝 Contributing:
+    Contributions are welcome! Please follow these steps:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    1.Fork the repository
 
-### Advanced Configuration
+    2.Create a new branch (git checkout -b feature/YourFeature)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+    3.Commit your changes (git commit -m 'Add some feature')
 
-### Deployment
+    4.Push to the branch (git push origin feature/YourFeature)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+    5.Open a Pull Request
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
