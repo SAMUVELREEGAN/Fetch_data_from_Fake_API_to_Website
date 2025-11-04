@@ -31,7 +31,6 @@ It is built with **Node.js** and **Express.js**, connected to **MongoDB** for da
 
  
 
-
 ---
 
 ## 📸 Screenshots
